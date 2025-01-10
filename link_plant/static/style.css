@@ -1,0 +1,54 @@
+table{
+    border: 2px;
+    border-style: dotted;
+    margin: auto;
+    margin-top: 150px;
+    width: 500px;
+    text-decoration: none;
+}
+table a{
+    text-decoration: none;
+}
+
+.del{
+    color: red;
+}
+
+.button{
+    margin-top: 15px;
+    padding: 15px;
+    margin-left: 500px;
+    width: 500px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 10px;
+}
+div a{
+    color: white;
+    text-decoration: none;
+
+
+}
+
+
+/* *********************    form.html   *********************************/
+form{
+    border-radius: 10px;
+}
+.chel{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+
+}
+
+input:hover{
+    background-color: rgb(145, 145, 214);
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+/* ********************   profile.html    ***********************/

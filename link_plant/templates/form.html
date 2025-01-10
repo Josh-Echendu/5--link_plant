@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    <h1>Link Form</h1>
+    <hr>
+    <h1>{{link.text}}</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}<br>
+        <input class='chel' type="submit" value="Save Link">
+    </form>
+
+{% endblock content %}
+

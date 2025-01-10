@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    <table border="2">
+        <tr>
+            <th scope="col">Text</th>
+            <th scope="">Url</th>
+            <th scope="">profile</th>
+            <th scope="">Edit</th>
+            <th scope="">Delete</th>
+            <th scope="">color</th>
+        </tr>
+        <tr id="acmilan">
+            {% for link in object_list %}
+            <td>{{ link.text }}</td>
+            <td><a href="{{link.url}}">{{ link.url }}</a></td>
+            <td><a href="{% url 'profile' link.profile.slug %}" target="_blank">{{ link.profile.name }}</a></td>
+            <td><a href="{% url 'link-update' link.pk %}">Edit</a></td>
+            <td><a href="{% url 'link-delete' link.pk %}" class="del">Delete</a></td>
+            <td><a href="{% url 'link-splashes' link.profile.name %}">{{link.profile.bg_color}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div>
+    <button class="button"><a href="{% url 'link-create' %}">Add new +</a></button>
+    </div>
+{% endblock content %}
